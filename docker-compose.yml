@@ -16,9 +16,9 @@ services:
   db:
     image: postgres:15-alpine
     env_file:
-      - config.env  # Те же переменные для БД
+      - config.env 
     environment:
-      POSTGRES_USER: ${DB_USER:-user}  # Значение по умолчанию
+      POSTGRES_USER: ${DB_USER:-user} 
       POSTGRES_PASSWORD: ${DB_PASSWORD:-password}
       POSTGRES_DB: ${DB_NAME:-walletdb}
     volumes:
